@@ -1,15 +1,15 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import PROJECTS from './data/projects';
 import styled from 'styled-components';
 
 class Project extends Component {
     render() {
-        const { title, image, description, link } = this.props.project;
+        const { image, description, link } = this.props.project;
 
         return(
             <ProjectContainer>
-                <h3>{title}</h3>
-                <StyledImage src={image} alt='profile' />
+                <ProjectImage src={image} alt='project' />
                 <p>{description}</p>
                 <a href={link}>{link}</a>
             </ProjectContainer>
@@ -20,25 +20,23 @@ class Project extends Component {
 class Projects extends Component {
     render() {
         return (
-            <div>
+            <ProjectsContainer>
                 <h2>Highlighted Projects</h2>
                 <div>
                     {
                         PROJECTS.map(PROJECT => {
-                            return(
-                                <Project key={PROJECT.id} project={PROJECT} />
-                            ); 
+                            return <Project key={PROJECT.id} project={PROJECT} />;
                         })
                     }
                 </div>
-            </div>
+            </ProjectsContainer>
         )
     }
 }
 
 export default Projects;
 
-const StyledImage = styled.img({
+const ProjectImage = styled.img({
     width: 200,
     height: 120,
 });
@@ -47,4 +45,8 @@ const ProjectContainer = styled.div({
     display: 'inline-block',
     width: 300,
     margin: 10,
+});
+
+const ProjectsContainer = styled.div({
+    textAlign: 'center',
 });
