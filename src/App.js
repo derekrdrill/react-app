@@ -2,8 +2,11 @@ import React, { Component} from 'react';
 export default class App extends Component {
     constructor() {
         super();
-        this.state = { displayBio: true };
+        this.state = { displayBio: false };
+        this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
     }
+
+    toggleDisplayBio() { this.setState({ displayBio: !this.state.displayBio, }); }
 
     render() {
         return (
@@ -17,8 +20,13 @@ export default class App extends Component {
                             <p>I live in Charlotte, and code every day.</p>
                             <p>My favorite languages are JavaScript and Typescript</p>
                             <p>Besides coding, I love my dog, staying active, sports and cooking!</p>
+                            <button onClick={this.toggleDisplayBio}>Show less</button>
                         </div>
-                    ) : null
+                    ) : (
+                        <div>
+                            <button onClick={this.toggleDisplayBio}>Read more</button>
+                        </div>
+                    )
                 }
             </div>
         )
