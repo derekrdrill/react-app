@@ -6,7 +6,9 @@ export default class App extends Component {
         this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
     }
 
-    toggleDisplayBio() { this.setState({ displayBio: !this.state.displayBio, }); }
+    toggleDisplayBio() { 
+        this.setState({ displayBio: !this.state.displayBio, });
+    }
 
     render() {
         return (
