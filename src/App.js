@@ -1,13 +1,4 @@
 import React, { Component} from 'react';
-
-class RegularClass {}
-class ComponentClass extends Component {}
-
-const regularClassInstance = new RegularClass();
-const componentClassInstance = new ComponentClass();
-
-console.log(regularClassInstance);
-console.log(componentClassInstance);
 export default class App extends Component {
     render() {
         return (
