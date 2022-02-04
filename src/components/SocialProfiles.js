@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import SOCIAL_PROFILES from './data/socialProfiles';
+import SOCIAL_PROFILES from '../data/socialProfiles';
 import styled from 'styled-components';
 
 class SocialProfile extends Component {

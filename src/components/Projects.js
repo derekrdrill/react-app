@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import PROJECTS from './data/projects';
+import PROJECTS from '../data/projects';
 import styled from 'styled-components';
 
 class Project extends Component {
