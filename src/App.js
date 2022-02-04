@@ -20,11 +20,11 @@ export default class App extends Component {
                             <p>I live in Charlotte, and code every day.</p>
                             <p>My favorite languages are JavaScript and Typescript</p>
                             <p>Besides coding, I love my dog, staying active, sports and cooking!</p>
-                            <button onClick={this.toggleDisplayBio}>Show less</button>
+                            <button className='btn btn-primary btn-sm' onClick={this.toggleDisplayBio}>Show less</button>
                         </div>
                     ) : (
                         <div>
-                            <button onClick={this.toggleDisplayBio}>Read more</button>
+                            <button className='btn btn-primary btn-sm' onClick={this.toggleDisplayBio}>Read more</button>
                         </div>
                     )
                 }
