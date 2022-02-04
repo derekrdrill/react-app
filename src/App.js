@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
+import profile from './assets/profile.png';
+
 export default class App extends Component {
     state = { displayBio: false };
 
@@ -11,6 +13,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
+                <img src={profile} alt='profile' />
                 <h1>Hello!</h1>
                 <p>My name is Derek. I am  a web developer.</p>
                 <p>I am looking forward to refreshing with this course</p>
