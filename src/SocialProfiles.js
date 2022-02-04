@@ -20,7 +20,7 @@ class SocialProfile extends Component {
 class SocialProfiles extends Component {
     render() {
         return (
-            <SocialProfilesContainer>
+            <div>
                 <h2>Let&rsquo;s Connect</h2>
                 <div>
                     {
@@ -29,7 +29,7 @@ class SocialProfiles extends Component {
                         })
                     }
                 </div>
-            </SocialProfilesContainer>
+            </div>
         )
     }
 }
@@ -46,8 +46,4 @@ const SocialProfileContainer = styled.div({
     display: 'inline-block',
     width: 75,
     margin: 10,
-});
-
-const SocialProfilesContainer = styled.div({
-    textAlign: 'center',
 });

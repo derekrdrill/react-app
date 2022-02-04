@@ -9,9 +9,10 @@ class Project extends Component {
 
         return(
             <ProjectContainer>
-                <ProjectImage src={image} alt='project' />
-                <p>{description}</p>
-                <a href={link}>{link}</a>
+                <a href={link}>
+                    <ProjectImage src={image} alt='project' />
+                </a>
+                <ProjectsDescription>{description}</ProjectsDescription>
             </ProjectContainer>
         )
     }
@@ -20,7 +21,7 @@ class Project extends Component {
 class Projects extends Component {
     render() {
         return (
-            <ProjectsContainer>
+            <div>
                 <h2>Highlighted Projects</h2>
                 <div>
                     {
@@ -29,7 +30,7 @@ class Projects extends Component {
                         })
                     }
                 </div>
-            </ProjectsContainer>
+            </div>
         )
     }
 }
@@ -47,6 +48,6 @@ const ProjectContainer = styled.div({
     margin: 10,
 });
 
-const ProjectsContainer = styled.div({
-    textAlign: 'center',
+const ProjectsDescription = styled.p({
+    fontSize: 16,
 });
