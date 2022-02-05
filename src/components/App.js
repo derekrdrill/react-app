@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import ProfileImage from './ProfileImage';
-import Bio from './Bio';
+import Bio from './Bio/Bio';
 
 export default class App extends Component {
     render() {
