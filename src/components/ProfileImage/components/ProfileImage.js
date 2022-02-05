@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import profile from '../../../assets/profile.jpg';
 import styled from 'styled-components';
 
-export default class ProfileImage extends Component {
-    render() {
-        return <StyledImage src={profile} alt='profile-image' />
-    }
-}
+const ProfileImage = () => <StyledImage src={profile} alt='profile-image' />;
+
+export default ProfileImage;
 
 const StyledImage = styled.img({
     width: 225,
