@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Bio_Attribute from './BioAttribute';
 
-export default class Bio extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Hello!</h1>
-                <p>My name is Derek</p>
-                <Bio_Attribute />
-            </div>
-        )
-    }    
-}
+const Bio = () => (
+    <div>
+        <h1>Hello!</h1>
+        <p>My name is Derek</p>
+        <Bio_Attribute />
+    </div>
+)
+
+export default Bio;
