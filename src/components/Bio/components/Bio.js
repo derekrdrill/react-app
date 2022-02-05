@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Bio_Attribute from './comoponents/BioAttribute';
+import Bio_Attribute from './BioAttribute';
 
 export default class Bio extends Component {
     render() {
