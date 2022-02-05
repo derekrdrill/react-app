@@ -1,38 +1,32 @@
 /* eslint-disable react/prop-types */
-import React, { Component } from 'react';
+import React from 'react';
 import SOCIAL_PROFILES from '../constants/SOCIAL_PROFILES'; 
 import styled from 'styled-components';
 
-class SocialProfile extends Component {
-    render() {
-        const { image, link, description } = this.props.socialProfile;
+const SocialProfile = props => {
+    const { image, link, description } = props.socialProfile;
 
-        return(
-            <SocialProfileContainer>
-                <a href={link} target="_blank" rel="noreferrer">
-                    <SocialProfileImage src={image} alt='social-profile' title={description} />
-                </a>
-            </SocialProfileContainer>
-        )
-    }
+    return (
+        <SocialProfileContainer>
+            <a href={link} target="_blank" rel="noreferrer">
+                <SocialProfileImage src={image} alt='social-profile' title={description} />
+            </a>
+        </SocialProfileContainer>
+    )
 }
 
-class SocialProfiles extends Component {
-    render() {
-        return (
-            <div>
-                <h2>Let&rsquo;s Connect</h2>
-                <div>
-                    {
-                        SOCIAL_PROFILES.map(SOCIAL_PROFILE => {
-                            return <SocialProfile key={SOCIAL_PROFILE.id} socialProfile={SOCIAL_PROFILE} />;
-                        })
-                    }
-                </div>
-            </div>
-        )
-    }
-}
+const SocialProfiles = () => (
+    <div>
+        <h2>Let&rsquo;s Connect</h2>
+        <div>
+            {
+                SOCIAL_PROFILES.map(SOCIAL_PROFILE =>
+                    <SocialProfile key={SOCIAL_PROFILE.id} socialProfile={SOCIAL_PROFILE} />
+                )
+            }
+        </div>
+    </div>
+)
 
 export default SocialProfiles;
 
