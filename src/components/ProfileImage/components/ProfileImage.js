@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import profile from '../assets/profile.jpg';
+import profile from '../../../assets/profile.jpg';
 import styled from 'styled-components';
-
 
 export default class ProfileImage extends Component {
     render() {
