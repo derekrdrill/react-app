@@ -46,8 +46,8 @@ const fadeOutKeyFrame = keyframes`
 `;
 
 const BioAttributeFade = styled.p`
-    opacity: ${(props) => props.fadeIn ? 100 : 0};
-    animation-name: ${(props) => props.fadeIn ? css`${fadeInKeyFrame}` : css`${fadeOutKeyFrame}`};
+    opacity: ${props => props.fadeIn ? 100 : 0};
+    animation-name: ${props => props.fadeIn ? css`${fadeInKeyFrame}` : css`${fadeOutKeyFrame}`};
     animation-duration: 2s;
 `;
 
