@@ -8,7 +8,7 @@ const BIO_ATTRIBUTES =[
 ];
 
 export default class BioAttribute extends Component {
-    state = { attrIndex: 0};
+    state = { attrIndex: 0 };
 
     componentDidMount() {
         this.animateTitles();
