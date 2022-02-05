@@ -1,8 +1,8 @@
 import React, { Component} from 'react';
-import Projects from './Projects';
-import SocialProfiles from './SocialProfiles';
+import Projects from './Projects/components/Projects';
+import SocialProfiles from './SocialProfiles/components/SocialProfiles';
 import ProfileImage from './ProfileImage';
-import Bio from './Bio/Bio';
+import Bio from './Bio/components/Bio';
 
 export default class App extends Component {
     render() {
