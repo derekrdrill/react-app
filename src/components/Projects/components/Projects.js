@@ -1,39 +1,33 @@
 /* eslint-disable react/prop-types */
-import React, { Component } from 'react';
+import React from 'react';
 import PROJECTS from '../constants/PROJECTS';
 import styled from 'styled-components';
 
-class Project extends Component {
-    render() {
-        const { image, description, link } = this.props.project;
+const Project = props => {
+    const { image, description, link } = props.project;
 
-        return(
-            <ProjectContainer>
-                <a href={link}>
-                    <ProjectImage src={image} alt='project' />
-                </a>
-                <ProjectsDescription>{description}</ProjectsDescription>
-            </ProjectContainer>
-        )
-    }
+    return(
+        <ProjectContainer>
+            <a href={link}>
+                <ProjectImage src={image} alt='project' />
+            </a>
+            <ProjectsDescription>{description}</ProjectsDescription>
+        </ProjectContainer>
+    )
 }
 
-class Projects extends Component {
-    render() {
-        return (
-            <div>
-                <h2>Highlighted Projects</h2>
-                <div>
-                    {
-                        PROJECTS.map(PROJECT => {
-                            return <Project key={PROJECT.id} project={PROJECT} />;
-                        })
-                    }
-                </div>
-            </div>
-        )
-    }
-}
+const Projects = () => (
+    <div>
+        <h2>Highlighted Projects</h2>
+        <div>
+            {
+                PROJECTS.map(PROJECT => 
+                    <Project key={PROJECT.id} project={PROJECT} />
+                )
+            }
+        </div>
+    </div>
+)
 
 export default Projects;
 
