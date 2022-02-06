@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import JokesGenerator from './JokesGenerator';
 
-class Jokes extends Component {
-    state = { joke: {} };
-
-    componentDidMount() {
-        fetch(
-            'https://cors-anywhere.herokuapp.com/https://official-joke-api.appspot.com/random_joke'
-        ).then(
-            response => console.log(response)
-        );
-    }
-
-    render() {
-        return <div></div>
-    }
-}
+const Jokes = () => (
+    <div>
+        <h2>Highlighted Joke</h2>
+        <JokesGenerator />
+    </div>
+)
 
 export default Jokes;
