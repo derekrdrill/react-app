@@ -1015,6 +1015,8 @@ var _app = require("./components/App");
 var _appDefault = parcelHelpers.interopDefault(_app);
 var _jokes = require("./components/Jokes/components/Jokes");
 var _jokesDefault = parcelHelpers.interopDefault(_jokes);
+var _header = require("./components/Header/components/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
 var _bootstrapCss = require("bootstrap/dist/css/bootstrap.css");
 var _indexCss = require("./index.css");
 const history = _createBrowserHistoryDefault.default();
@@ -1022,33 +1024,35 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
     history: history,
     __source: {
         fileName: "src/index.js",
-        lineNumber: 13,
+        lineNumber: 14,
         columnNumber: 5
     },
     __self: undefined
 }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
     __source: {
         fileName: "src/index.js",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 9
     },
     __self: undefined
 }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
-    component: _appDefault.default,
+    render: ()=>/*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, null, /*#__PURE__*/ _reactDefault.default.createElement(_appDefault.default, null))
+    ,
     __source: {
         fileName: "src/index.js",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 13
     },
     __self: undefined
 }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
     path: "/jokes",
-    component: _jokesDefault.default,
+    render: ()=>/*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, null, /*#__PURE__*/ _reactDefault.default.createElement(_jokesDefault.default, null))
+    ,
     __source: {
         fileName: "src/index.js",
-        lineNumber: 16,
+        lineNumber: 17,
         columnNumber: 13
     },
     __self: undefined
@@ -1059,7 +1063,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","react-dom":"j6uA9","react-router-dom":"b43zg","history/createBrowserHistory":"fA92W","./components/App":"ey9du","./components/Jokes/components/Jokes":"g3IDP","bootstrap/dist/css/bootstrap.css":"jJvnD","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","react-router-dom":"b43zg","history/createBrowserHistory":"fA92W","./components/App":"ey9du","./components/Jokes/components/Jokes":"g3IDP","bootstrap/dist/css/bootstrap.css":"jJvnD","./index.css":"irmnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header/components/Header":"18uQG"}],"21dqq":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react.development.js');
 
@@ -25098,30 +25102,35 @@ var _profileImage = require("./ProfileImage/components/ProfileImage");
 var _profileImageDefault = parcelHelpers.interopDefault(_profileImage);
 var _bio = require("./Bio/components/Bio");
 var _bioDefault = parcelHelpers.interopDefault(_bio);
-var _header = require("./Header/components/Header");
-var _headerDefault = parcelHelpers.interopDefault(_header);
 const App = ()=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
         __source: {
             fileName: "src/components/App.js",
-            lineNumber: 9,
+            lineNumber: 8,
             columnNumber: 5
         },
         __self: undefined
-    }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_profileImageDefault.default, {
+        __source: {
+            fileName: "src/components/App.js",
+            lineNumber: 9,
+            columnNumber: 9
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_bioDefault.default, {
         __source: {
             fileName: "src/components/App.js",
             lineNumber: 10,
             columnNumber: 9
         },
         __self: undefined
-    }), /*#__PURE__*/ _reactDefault.default.createElement(_profileImageDefault.default, {
+    }), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
         __source: {
             fileName: "src/components/App.js",
             lineNumber: 11,
             columnNumber: 9
         },
         __self: undefined
-    }), /*#__PURE__*/ _reactDefault.default.createElement(_bioDefault.default, {
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_projectsDefault.default, {
         __source: {
             fileName: "src/components/App.js",
             lineNumber: 12,
@@ -25135,24 +25144,10 @@ const App = ()=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
             columnNumber: 9
         },
         __self: undefined
-    }), /*#__PURE__*/ _reactDefault.default.createElement(_projectsDefault.default, {
-        __source: {
-            fileName: "src/components/App.js",
-            lineNumber: 14,
-            columnNumber: 9
-        },
-        __self: undefined
-    }), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
-        __source: {
-            fileName: "src/components/App.js",
-            lineNumber: 15,
-            columnNumber: 9
-        },
-        __self: undefined
     }), /*#__PURE__*/ _reactDefault.default.createElement(_socialProfilesDefault.default, {
         __source: {
             fileName: "src/components/App.js",
-            lineNumber: 16,
+            lineNumber: 14,
             columnNumber: 9
         },
         __self: undefined
@@ -25168,7 +25163,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","./Projects/components/Projects":"4Bdr8","./SocialProfiles/components/SocialProfiles":"3vjYZ","./ProfileImage/components/ProfileImage":"hdygE","./Bio/components/Bio":"dAYnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Header/components/Header":"18uQG"}],"4Bdr8":[function(require,module,exports) {
+},{"react":"21dqq","./Projects/components/Projects":"4Bdr8","./SocialProfiles/components/SocialProfiles":"3vjYZ","./ProfileImage/components/ProfileImage":"hdygE","./Bio/components/Bio":"dAYnC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4Bdr8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4d58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28213,78 +28208,7 @@ const BIO_ATTRIBUTES = [
 ];
 exports.default = BIO_ATTRIBUTES;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"18uQG":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b597 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b597.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-const Header = ()=>{
-    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-        __source: {
-            fileName: "src/components/Header/components/Header.js",
-            lineNumber: 7,
-            columnNumber: 9
-        },
-        __self: undefined
-    }, /*#__PURE__*/ _reactDefault.default.createElement(InlineHeaders, {
-        __source: {
-            fileName: "src/components/Header/components/Header.js",
-            lineNumber: 8,
-            columnNumber: 13
-        },
-        __self: undefined
-    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
-        to: "/",
-        __source: {
-            fileName: "src/components/Header/components/Header.js",
-            lineNumber: 9,
-            columnNumber: 17
-        },
-        __self: undefined
-    }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement(InlineHeaders, {
-        __source: {
-            fileName: "src/components/Header/components/Header.js",
-            lineNumber: 11,
-            columnNumber: 13
-        },
-        __self: undefined
-    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
-        to: "/jokes",
-        __source: {
-            fileName: "src/components/Header/components/Header.js",
-            lineNumber: 12,
-            columnNumber: 17
-        },
-        __self: undefined
-    }, "Jokes"))));
-};
-_c = Header;
-exports.default = Header;
-const InlineHeaders = _styledComponentsDefault.default.h3({
-    display: 'inline-block',
-    margin: 10,
-    marginBottom: 30
-});
-_c1 = InlineHeaders;
-var _c, _c1;
-$RefreshReg$(_c, "Header");
-$RefreshReg$(_c1, "InlineHeaders");
-
-  $parcel$ReactRefreshHelpers$b597.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","react-router-dom":"b43zg","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g3IDP":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g3IDP":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cd3b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28297,33 +28221,24 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _jokesGenerator = require("./JokesGenerator");
 var _jokesGeneratorDefault = parcelHelpers.interopDefault(_jokesGenerator);
-var _header = require("../..//Header/components/Header");
-var _headerDefault = parcelHelpers.interopDefault(_header);
 const Jokes = ()=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
         __source: {
             fileName: "src/components/Jokes/components/Jokes.js",
-            lineNumber: 7,
+            lineNumber: 5,
             columnNumber: 5
         },
         __self: undefined
-    }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+    }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
         __source: {
             fileName: "src/components/Jokes/components/Jokes.js",
-            lineNumber: 8,
-            columnNumber: 9
-        },
-        __self: undefined
-    }), /*#__PURE__*/ _reactDefault.default.createElement("h2", {
-        __source: {
-            fileName: "src/components/Jokes/components/Jokes.js",
-            lineNumber: 9,
+            lineNumber: 6,
             columnNumber: 9
         },
         __self: undefined
     }, "Highlighted Joke"), /*#__PURE__*/ _reactDefault.default.createElement(_jokesGeneratorDefault.default, {
         __source: {
             fileName: "src/components/Jokes/components/Jokes.js",
-            lineNumber: 10,
+            lineNumber: 7,
             columnNumber: 9
         },
         __self: undefined
@@ -28339,7 +28254,7 @@ $RefreshReg$(_c, "Jokes");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","./JokesGenerator":"14HxQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../..//Header/components/Header":"18uQG"}],"14HxQ":[function(require,module,exports) {
+},{"react":"21dqq","./JokesGenerator":"14HxQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"14HxQ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8eba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28486,6 +28401,84 @@ $RefreshReg$(_c1, "StyledJokeInputContainer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jJvnD":[function() {},{}],"irmnC":[function() {},{}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireb35c")
+},{"react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jJvnD":[function() {},{}],"irmnC":[function() {},{}],"18uQG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b597 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b597.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/* eslint-disable react/prop-types */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+const Header = ({ children  })=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "src/components/Header/components/Header.js",
+            lineNumber: 8,
+            columnNumber: 9
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "src/components/Header/components/Header.js",
+            lineNumber: 9,
+            columnNumber: 13
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(InlineHeaders, {
+        __source: {
+            fileName: "src/components/Header/components/Header.js",
+            lineNumber: 10,
+            columnNumber: 17
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/",
+        __source: {
+            fileName: "src/components/Header/components/Header.js",
+            lineNumber: 11,
+            columnNumber: 21
+        },
+        __self: undefined
+    }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement(InlineHeaders, {
+        __source: {
+            fileName: "src/components/Header/components/Header.js",
+            lineNumber: 13,
+            columnNumber: 17
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/jokes",
+        __source: {
+            fileName: "src/components/Header/components/Header.js",
+            lineNumber: 14,
+            columnNumber: 21
+        },
+        __self: undefined
+    }, "Jokes"))), children));
+};
+_c = Header;
+exports.default = Header;
+const InlineHeaders = _styledComponentsDefault.default.h3({
+    display: 'inline-block',
+    margin: 10,
+    marginBottom: 30
+});
+_c1 = InlineHeaders;
+var _c, _c1;
+$RefreshReg$(_c, "Header");
+$RefreshReg$(_c1, "InlineHeaders");
+
+  $parcel$ReactRefreshHelpers$b597.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","react-router-dom":"b43zg","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequireb35c")
 
 //# sourceMappingURL=index.975ef6c8.js.map
