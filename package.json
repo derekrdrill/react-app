@@ -16,9 +16,9 @@
     "styled-components": "^5.3.3"
   },
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "start": "npm run build && live-server dist"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0"
