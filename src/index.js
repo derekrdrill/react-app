@@ -16,6 +16,5 @@ ReactDOM.render(
             <Route path='/jokes' component={Jokes} />
         </Switch>
     </Router>, 
-    // null,
     document.getElementById('root')
 );
