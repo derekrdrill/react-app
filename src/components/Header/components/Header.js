@@ -7,12 +7,15 @@ const Header = ({ children }) => {
     return (
         <div>
             <div>
-                <InlineHeaders>
+                <StyledH3>
                     <Link to='/'>Home</Link>
-                </InlineHeaders>
-                <InlineHeaders>
+                </StyledH3>
+                <StyledH3>
                     <Link to='/jokes'>Jokes</Link>
-                </InlineHeaders> 
+                </StyledH3> 
+                <StyledH3>
+                    <Link to='/music-master'>Music Master</Link>
+                </StyledH3> 
             </div>
             {children}
         </div>
@@ -21,7 +24,7 @@ const Header = ({ children }) => {
 
 export default Header;
 
-const InlineHeaders = styled.h3({
+const StyledH3 = styled.h3({
     display: 'inline-block',
     margin: 10,
     marginBottom: 30,
